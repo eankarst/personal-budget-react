@@ -1,12 +1,15 @@
-const express = require("express");
+const express = require('express');
+const cors = require('cors');
 const app = express();
-const port = 300;
+const port = 3000;
 
-app.use("/", express.static("public"));
+app.use(cors());
 
-app.get("/hello", (req, res) => {
-  res.send("Hello World!");
-});
+// app.use("/", express.static("public"));
+
+// app.get("/hello", (req, res) => {
+//   res.send("Hello World!");
+// });
 
 app.get("/budget", (req, res) => {
   res.sendFile('data_file.json', {root: __dirname});
