@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './PieChart/PieChart';
 
 import {
   BrowserRouter as Router,
